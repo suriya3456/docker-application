@@ -11,12 +11,15 @@ pipeline {
 
         stage('Build Docker Image') {
           steps {
-            sh 'docker build -t jayasurya/sampledocker:${BUILD_NUMBER} .'
+            sh 'docker build -t jayasurya/webapp:${BUILD_NUMBER} .'
             }
         }
 
         stage('Push Image to Docker Hub') {
           steps {
-           sh    'docker push jayasurya/sampledocker:${BUILD_NUMBER}'
+           sh    'docker push jayasurya/webapp:${BUILD_NUMBER}'
            }
         }
+
+    }
+}
