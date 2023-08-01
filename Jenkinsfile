@@ -21,5 +21,12 @@ pipeline {
            }
         }
 
+stage('Deploy to Docker Host') {
+          steps {
+            sh    'docker -H tcp://10.0.1.176:2375 stop webapp1 || true'
+            sh    'docker -H tcp://10.0.1.176:2375 run --rm -dit --name webapp1  -p 8000:80 jayasurya/webapp1:${BUILD_NUMBER}'
+            }
+        }
+
     }
 }
