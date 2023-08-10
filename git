@@ -1,0 +1,9 @@
+Add and commit in one command: 
+
+--> git commit -am "commit message"
+
+Copy changes from another branch:
+
+There are some scenarios where we have to add changes to more than one branches, for example if there are two versions and we support both of them, we should commit changes to both branches.
+
+Let’s have two branches, branchA and branchB. Instead of committing in both branches manually, we can use git rebase command.
