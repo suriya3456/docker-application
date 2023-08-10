@@ -1,1 +1,1 @@
-FROM baseImage
+FROM ubuntu:latest
